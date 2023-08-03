@@ -4,8 +4,9 @@ const fichaControler = require('../controllers/fichaControler');
 
 
 router.post('/', fichaControler.addFicha);
-router.get('/', fichaControler.getFichas);
-router.get('/:_id', fichaControler.getFicha);
+router.get('/:UserId', fichaControler.getFichas);
+router.get('/ficha/:_id', fichaControler.getFicha);
 router.put('/:_id',fichaControler.updateFicha);
+router.delete('/:_id', fichaControler.deleteFicha);
 
 module.exports = router;

@@ -13,13 +13,25 @@ exports.addFicha = async (req, res) => {
 
 exports.getFichas = async (req, res) => {
   try {
-    const ficha = await Ficha.find();
+    const UserId = req.params.UserId;
+    const ficha = await Ficha.find({UserId:UserId});
     res.json(ficha);
   } catch (error) {
     console.log(error);
     res.status(500).send("hubo un error");
   }
 };
+
+exports.deleteFicha = async (req, res) => {
+  try {
+    const _id = req.params._id;
+    await Ficha.deleteOne({_id:_id});
+    res.send("Borrado con exito");
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("hubo un error");
+  }
+}
 
 exports.getFicha = async (req, res) => {
   try {
@@ -93,3 +105,4 @@ exports.updateFicha = async (req, res) => {
     res.status(500).send("Hubo un error");
   }
 };
+
