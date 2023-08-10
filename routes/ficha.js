@@ -4,6 +4,7 @@ const fichaControler = require('../controllers/fichaControler');
 
 
 router.post('/', fichaControler.addFicha);
+router.get('/', fichaControler.getAllFichas);
 router.get('/:UserId', fichaControler.getFichas);
 router.get('/ficha/:_id', fichaControler.getFicha);
 router.put('/:_id',fichaControler.updateFicha);

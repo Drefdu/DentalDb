@@ -22,11 +22,21 @@ exports.getFichas = async (req, res) => {
   }
 };
 
+exports.getAllFichas = async (req, res) => {
+  try {
+    const fichas = await Ficha.find();
+    res.json(fichas);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("hubo un error");
+  }
+}
+
 exports.deleteFicha = async (req, res) => {
   try {
     const _id = req.params._id;
     await Ficha.deleteOne({_id:_id});
-    res.send("Borrado con exito");
+    return res.send({ msg: "Borrado con exito" });
   } catch (error) {
     console.log(error);
     res.status(500).send("hubo un error");

@@ -5,10 +5,6 @@ const FichaSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    Correo: {
-        type: String,
-        required: false
-    },
     Nombre: {
         type: String,
         required: true
@@ -76,7 +72,7 @@ const FichaSchema = mongoose.Schema({
     alergias: {
         type: String,
         required: false
-    }  
+    }
 })
 
 module.exports = mongoose.model('Ficha', FichaSchema);
