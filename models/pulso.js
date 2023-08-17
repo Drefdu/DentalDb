@@ -1,13 +1,9 @@
 const mongoose = require('mongoose');
 
 const PulsoSchema = mongoose.Schema({
-    id: {
-        type: String,
-        require: true
-    },
     valor: {
-        type: Number,
-        required: true 
+        type: String,
+        required:true
     }
 }); 
 
