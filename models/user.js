@@ -16,6 +16,10 @@ const UserSchema = mongoose.Schema({
     fichas: {
         type:[],
         default: []
+    },
+    admin: {
+        type: String,
+        default: false
     }
 
 }); 
