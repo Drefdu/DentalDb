@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-//DB_MONGO = "mongodb+srv://eduardo:1234@cluster0.slgmlvn.mongodb.net/Dental";
-DB_MONGO = 'mongodb://localhost:27017'
+DB_MONGO = "mongodb+srv://eduardo:1234@cluster0.slgmlvn.mongodb.net/Dental";
+//DB_MONGO = 'mongodb://localhost:27017'
 
 const connectDb = async () => {
   try {

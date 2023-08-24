@@ -35,6 +35,7 @@ app.use("/fotos", require("./routes/fotos"));
 app.use("/eventos", require("./routes/eventos"));
 app.use("/pulso", require('./routes/pulso'));
 app.use("/mensajes", require('./routes/mensajes'));
+app.use("/dientes", require('./routes/diente'));
 
 const server = app.listen(4000, () => {
   console.log("servidor corriendo en el puerto 4000");
